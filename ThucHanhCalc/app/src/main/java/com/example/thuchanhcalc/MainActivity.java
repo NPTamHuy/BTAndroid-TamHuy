@@ -41,14 +41,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Phương thức này được gọi từ thuộc tính android:onClick trong file XML
     public void XuLyPhepToan(View view) {
             // Lấy giá trị từ EditText và chuyển sang số
             int a = Integer.parseInt(etxt1.getText().toString());
             int b = Integer.parseInt(etxt2.getText().toString());
             int ketQua;
 
-            // Kiểm tra xem nút nào đã được nhấn
             if (view.getId() == R.id.btn1) {
                 ketQua = a + b;
                 txtresult.setText(String.valueOf(ketQua));
