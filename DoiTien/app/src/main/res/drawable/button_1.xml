@@ -1,0 +1,30 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lớp dưới cùng: Đây là lớp tạo ra phần bóng và đường viền -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Màu của phần bóng/đáy -->
+            <solid android:color="#175AF1"/>
+
+            <!-- Bo góc -->
+            <corners android:radius="12dp"/>
+
+            <!-- THÊM ĐƯỜNG VIỀN (BORDER) VÀO ĐÂY -->
+            <stroke
+                android:width="2dp"          <!-- Độ dày của viền -->
+            android:color="#0D3B97" />   <!-- Màu của viền (một màu xanh đậm hơn) -->
+        </shape>
+    </item>
+
+    <!-- Lớp trên cùng: Đây là lớp mặt trên của button -->
+    <item android:bottom="5dp" android:left="5dp" android:right="0dp">
+        <shape android:shape="rectangle">
+            <!-- Màu của mặt trên button -->
+            <solid android:color="#009FFD"/>
+
+            <!-- Bo góc cho lớp trên -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+</layer-list>
