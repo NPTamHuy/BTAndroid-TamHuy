@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvKhachHang;
     ArrayAdapter<String> adapter;
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
