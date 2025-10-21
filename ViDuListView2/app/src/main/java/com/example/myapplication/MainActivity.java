@@ -1,4 +1,4 @@
-package com.example.vidulistview;
+package com.example.my_application;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +15,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView lvKhachHang;
-    ArrayAdapter<String> adapter;
-
+    ListView lvCity;
+    ArrayAdapter<String> cityAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,26 +24,30 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        lvKhachHang = findViewById(R.id.listViewKhachHang);
+        lvCity = findViewById(R.id.listViewCity);
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+        ArrayList<String> cityList = new ArrayList<>();
+        cityList.add("Hà Nội");
+        cityList.add("TP. Hồ Chí Minh");
+        cityList.add("Nha Trang");
+        cityList.add("Đà Nẵng");
+        cityList.add("Hải Phòng");
+        cityList.add("Cần Thơ");
+        cityList.add("Huế");
+        cityList.add("Vũng Tàu");
+        cityList.add("Đà Lạt");
+        cityList.add("Quy Nhơn");
 
-        lvKhachHang.setAdapter(adapter);
+        cityAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cityList);
+        lvCity.setAdapter(cityAdapter);
 
-        adapter.add("1. Anh Nguyễn Văn C");
-        adapter.add("2. Chị Trần Thị D");
-        adapter.add("3. Anh Lê Thanh R");
-        adapter.add("4. Chị Phạm Thị E");
-        adapter.add("5. Anh Hoàng Văn F");
-
-        lvKhachHang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvCity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedItem = adapter.getItem(position);
-                Toast.makeText(MainActivity.this, "Bạn đã chọn: " + selectedItem, Toast.LENGTH_SHORT).show();
+                String selectedCity = cityAdapter.getItem(position);
+                Toast.makeText(MainActivity.this, "Bạn đã chọn: " + selectedCity, Toast.LENGTH_SHORT).show();
             }
         });
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
