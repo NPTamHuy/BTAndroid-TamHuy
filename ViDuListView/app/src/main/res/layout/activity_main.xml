@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="413dp"
+        android:layout_height="96dp"
+        android:background="#6200EE"
+        android:gravity="center"
+        android:text="DANH SÁCH KHÁCH HÀNG"
+        android:textColor="@android:color/white"
+        android:textSize="20p"
+        android:textStyle="bold"
+
+    <ListView
+        android:id="@+id/listViewKhachHang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
