@@ -1,24 +1,42 @@
 package com.example.gk2210;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
+
+    CardView cardDtb, cardDs, cardHd, cardAb, cardBonus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        cardDtb = findViewById(R.id.card_dtb);
+        cardDs = findViewById(R.id.card_ds);
+        cardHd = findViewById(R.id.card_hd);
+        cardAb = findViewById(R.id.card_ab);
+        cardBonus = findViewById(R.id.card_bonus);
+
+        cardDtb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, DtbActivity.class);
+                startActivity(myIntent);
+            }
         });
+
+        cardAb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
 }
+
