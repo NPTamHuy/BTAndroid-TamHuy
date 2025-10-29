@@ -13,6 +13,15 @@
         android:theme="@style/Theme.DựÁnCôngTrìnhThiGiữaKỳ"
         tools:targetApi="31">
         <activity
+            android:name=".AboutmeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DsActivity"
+            android:exported="false" />
+        <activity
             android:name=".DtActivity"
             android:exported="false" />
         <activity

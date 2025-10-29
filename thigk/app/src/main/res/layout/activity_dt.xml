@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,7 +7,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DtbActivity">
+    tools:context=".DtActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_layout"
@@ -57,9 +58,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
         <TextView
-            android:id="@+id/label_diemGK"
+            android:id="@+id/label_chieuDai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="156dp"
@@ -69,62 +69,60 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_diemGK"
+            android:id="@+id/input_layout_chieuDai"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/label_diemGK">
+            app:layout_constraintTop_toBottomOf="@id/label_chieuDai">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_diemGK"
+                android:id="@+id/input_chieuDai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/clip__1_"
                 android:hint=" | Nhập Chiều Dài"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/label_diemCK"
+            android:id="@+id/label_chieuRong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="156dp"
             android:layout_marginTop="16dp"
-            android:text="Chiều Rông"
+            android:text="Chiều Rộng"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_layout_diemGK" />
+            app:layout_constraintTop_toBottomOf="@id/input_layout_chieuDai" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_diemCK"
+            android:id="@+id/input_layout_chieuRong"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/label_diemCK">
+            app:layout_constraintTop_toBottomOf="@id/label_chieuRong">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_diemCK"
+                android:id="@+id/input_chieuRong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/clip__1_"
                 android:hint=" | Nhập Chiều Rộng"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_tinhDiem"
+            android:id="@+id/btn_tinhToan"
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/button"
             android:text="TÍNH KẾT QUẢ"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@id/input_layout_diemCK"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_chieuRong"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -135,7 +133,7 @@
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_tinhDiem">
+            app:layout_constraintTop_toBottomOf="@id/btn_tinhToan">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tv_ketQua"
@@ -151,5 +149,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

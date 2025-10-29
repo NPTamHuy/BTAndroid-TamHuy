@@ -13,7 +13,7 @@
         android:id="@+id/header_layout"
         android:layout_width="413dp"
         android:layout_height="136dp"
-        android:background="@drawable/bgb"
+        android:background="@drawable/bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +23,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:src="@drawable/image_removebg_preview__19_"
+            android:src="@drawable/image_removebg_preview__1_"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="16dp"
-            android:text="DANH SÁCH MÔN HỌC"
+            android:text="DANH SÁCH VẬT LIỆU"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -48,7 +48,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
-        android:id="@+id/listview_monhoc"
+        android:id="@+id/listview_vatlieu"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
