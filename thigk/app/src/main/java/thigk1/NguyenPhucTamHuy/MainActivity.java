@@ -3,9 +3,9 @@ package thigk1.NguyenPhucTamHuy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast; // Import Toast
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView; // Import CardView
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +38,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        cardHd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CtActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        cardAb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AboutmeActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
+
