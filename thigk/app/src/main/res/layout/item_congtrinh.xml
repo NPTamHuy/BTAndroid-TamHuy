@@ -42,7 +42,6 @@
             android:paddingBottom="16dp"
             android:text="Thời gian: 3 tháng"
             android:textSize="14sp"
-            android:drawableStart="@drawable/ic_clock"
             android:drawablePadding="8dp"
             android:gravity="center_vertical" />
 
